@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Affision Partner</title>
+  <rect width="240" height="240" rx="42" fill="#0d224d"/>
+  <rect x="34" y="34" width="172" height="172" rx="28" fill="#4d9ce6" opacity="0.18"/>
+  <text x="120" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff">AP</text>
+  <text x="120" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Partner</text>
+</svg>

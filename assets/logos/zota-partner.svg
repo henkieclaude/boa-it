@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Zota Partner</title>
+  <rect width="240" height="240" rx="42" fill="#112a5f"/>
+  <circle cx="120" cy="88" r="42" fill="#4d9ce6" opacity="0.22"/>
+  <text x="120" y="104" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Z</text>
+  <text x="120" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Partner</text>
+</svg>

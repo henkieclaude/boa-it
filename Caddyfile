@@ -1,0 +1,51 @@
+# Caddyfile — production config for best-onlinecasinoaustralia.it.com
+# Caddy automatically provisions & renews TLS certs via Let's Encrypt.
+# Edit the email below before first run.
+
+{
+	email admin@best-onlinecasinoaustralia.it.com
+	# Uncomment the next line on first deploy if DNS hasn't propagated yet
+	# (uses Let's Encrypt staging certs — browsers will warn, but it won't get you rate-limited):
+	# acme_ca https://acme-staging-v02.api.letsencrypt.org/directory
+}
+
+# Redirect the www subdomain to the apex
+www.best-onlinecasinoaustralia.it.com {
+	redir https://best-onlinecasinoaustralia.it.com{uri} permanent
+}
+
+best-onlinecasinoaustralia.it.com {
+	root * /var/www/best-onlinecasinoaustralia.it.com
+	encode zstd gzip
+
+	# Security headers
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+		Permissions-Policy "geolocation=(), microphone=(), camera=()"
+		# Remove the "Server: Caddy" header
+		-Server
+	}
+
+	# Long cache for fingerprinted static assets
+	@assets path /assets/*
+	header @assets Cache-Control "public, max-age=31536000, immutable"
+
+	# Short cache for HTML so updates show up quickly
+	@html path *.html /
+	header @html Cache-Control "public, max-age=300, must-revalidate"
+
+	file_server {
+		hide .git* deploy Caddyfile README.md start-server.command
+	}
+
+	# Basic logging — rotated daily, kept 14 days
+	log {
+		output file /var/log/caddy/best-onlinecasinoaustralia.it.com.log {
+			roll_size 10mb
+			roll_keep 14
+		}
+		format json
+	}
+}

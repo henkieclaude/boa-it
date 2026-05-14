@@ -1,0 +1,67 @@
+name: Deploy to Kimsufi
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up SSH
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+
+      - name: Sync site files
+        run: |
+          rsync -avz --delete \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='deploy' \
+            --exclude='start-server.command' \
+            --exclude='README.md' \
+            --exclude='.gitignore' \
+            --exclude='Caddyfile' \
+            -e "ssh -i ~/.ssh/id_ed25519 -o StrictHostKeyChecking=yes" \
+            ./ \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/var/www/best-onlinecasinoaustralia.it.com/"
+
+      - name: Upload Caddyfile and reload if changed
+        run: |
+          # Push Caddyfile to the deploy user's home
+          scp -i ~/.ssh/id_ed25519 \
+            ./Caddyfile \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:/home/${{ secrets.DEPLOY_USER }}/Caddyfile"
+
+          # Compare against the live config; only reload Caddy if it changed
+          ssh -i ~/.ssh/id_ed25519 \
+            "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" \
+            'if ! cmp -s /home/'"${{ secrets.DEPLOY_USER }}"'/Caddyfile /etc/caddy/Caddyfile; then
+               echo "Caddyfile changed, validating and reloading...";
+               sudo /usr/bin/caddy validate --config /etc/caddy/Caddyfile || exit 1;
+               sudo /usr/bin/cp /home/'"${{ secrets.DEPLOY_USER }}"'/Caddyfile /etc/caddy/Caddyfile;
+               sudo /bin/systemctl reload caddy;
+             else
+               echo "Caddyfile unchanged, no reload needed.";
+             fi'
+
+      - name: Smoke test
+        run: |
+          # Hit the server by IP with the Host header so it works even before DNS propagates
+          if ! curl -sSf --resolve "best-onlinecasinoaustralia.it.com:443:${{ secrets.DEPLOY_HOST }}" \
+                   -o /dev/null -w "%{http_code}\n" \
+                   "https://best-onlinecasinoaustralia.it.com/" -k | grep -qE '^(200|301|302|308)$'; then
+            echo "WARNING: Smoke test did not return a 2xx/3xx — site may not be reachable yet."
+            echo "(This is expected on first deploy before DNS + TLS are ready.)"
+          fi

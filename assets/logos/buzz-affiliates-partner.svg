@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>Buzz Affiliates Partner</title>
+  <rect width="240" height="240" rx="42" fill="#0d224d"/>
+  <circle cx="96" cy="92" r="30" fill="#4d9ce6"/>
+  <circle cx="144" cy="92" r="30" fill="#6fb0ee"/>
+  <circle cx="120" cy="132" r="30" fill="#9bc7f3"/>
+  <text x="120" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#ffffff">Buzz Partner</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>DepositWin</title>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4d9ce6"/>
+      <stop offset="100%" stop-color="#17397c"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="42" fill="url(#g)"/>
+  <circle cx="120" cy="85" r="34" fill="#ffffff" opacity="0.18"/>
+  <path d="M107 86h26M120 73v26" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <text x="120" y="156" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Deposit</text>
+  <text x="120" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">Win</text>
+</svg>

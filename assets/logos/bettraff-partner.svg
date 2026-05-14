@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-labelledby="title">
+  <title>BetTraff Partner</title>
+  <rect width="240" height="240" rx="42" fill="#17397c"/>
+  <path d="M48 56h144v128H48z" fill="#4d9ce6" opacity="0.18"/>
+  <text x="120" y="112" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">BT</text>
+  <text x="120" y="164" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Partner</text>
+</svg>
