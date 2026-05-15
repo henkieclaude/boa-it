@@ -81,38 +81,14 @@ a {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
   color: var(--white);
+  text-decoration: none;
 }
 
-.brand-mark {
-  width: 54px;
-  height: 54px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  font-size: 0.98rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.brand-copy {
-  display: grid;
-  gap: 2px;
-}
-
-.brand-copy strong {
-  font-size: 1.05rem;
-  letter-spacing: 0.02em;
-}
-
-.brand-copy span {
-  font-size: 0.9rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  opacity: 0.88;
+.brand-logo {
+  height: 60px;
+  width: auto;
+  display: block;
 }
 
 .site-nav {
