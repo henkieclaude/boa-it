@@ -308,7 +308,6 @@ section {
 }
 
 .section-heading {
-  max-width: 760px;
   margin-bottom: 20px;
 }
 
@@ -756,7 +755,6 @@ tbody td:last-child a {
   border-radius: var(--radius-lg);
   background: var(--blue-100);
   border: 1px solid rgba(77, 156, 230, 0.22);
-  max-width: 700px;
 }
 
 .toc__title {
@@ -811,7 +809,6 @@ tbody td:last-child a {
 }
 
 .prose {
-  max-width: 780px;
 }
 
 .prose p {
@@ -993,7 +990,6 @@ tbody td:last-child a {
   background: var(--blue-100);
   border-left: 4px solid var(--blue-500);
   margin: 16px 0 24px;
-  max-width: 780px;
 }
 
 .callout p {
