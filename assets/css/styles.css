@@ -1000,7 +1000,6 @@ tbody td:last-child a {
 }
 
 .conclusion-block {
-  max-width: 720px;
   padding: 34px;
   border-radius: var(--radius-xl);
   background: linear-gradient(145deg, var(--navy-900), var(--navy-950));
@@ -1173,4 +1172,91 @@ tbody td:last-child a {
   .snapshot-box { grid-template-columns: repeat(2, 1fr); }
   .rg-contacts { grid-template-columns: 1fr; }
   .pros-cons { grid-template-columns: 1fr; }
+}
+
+/* ===== Conclusion two-column layout ===== */
+.conclusion-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 24px;
+  align-items: start;
+}
+
+.conclusion-cta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px 24px;
+  border-radius: var(--radius-xl);
+  background: var(--white);
+  border: var(--border-soft);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.conclusion-cta-card__kicker {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--blue-500);
+  margin: 0;
+}
+
+.conclusion-cta-card__logo-wrap {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--blue-100);
+  border: 1px solid rgba(16, 36, 65, 0.1);
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.conclusion-cta-card__logo {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+.conclusion-cta-card h3 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: var(--navy-950);
+}
+
+.conclusion-cta-card__points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: grid;
+  gap: 8px;
+  color: var(--ink-700);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.conclusion-cta-card__points li::before {
+  content: "✓";
+  color: var(--blue-500);
+  margin-right: 8px;
+  font-weight: 800;
+}
+
+.conclusion-cta-card .button {
+  width: 100%;
+}
+
+.conclusion-cta-card__note {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--ink-500);
+}
+
+@media (max-width: 860px) {
+  .conclusion-grid {
+    grid-template-columns: 1fr;
+  }
 }
