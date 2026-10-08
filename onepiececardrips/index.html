@@ -1,0 +1,927 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>One Piece Card Rips</title>
+<meta name="description" content="Compare the best sites to rip One Piece TCG booster packs online. Reviewed rip sites, welcome offers, live pulls, set guides and a free demo rip.">
+<meta name="theme-color" content="#0a1a2c">
+<link rel="canonical" href="https://onepiececardrips.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="One Piece Card Rips">
+<meta property="og:description" content="Find the best places to rip One Piece TCG packs online. Reviewed sites, welcome offers and live pulls.">
+<meta property="og:url" content="https://onepiececardrips.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+/* Layout: open sea ground; rip sites pinned up as parchment wanted posters; cards drawn as manga screentone with foil for hits. */
+:root {
+  --sea: #0a1a2c;
+  --sea-2: #0f2439;
+  --surface: #14304b;
+  --ink: #eef3f8;
+  --muted: #a3b6ca;
+  --line: rgba(190, 215, 240, 0.14);
+  --gold: #f4c64f;
+  --gold-deep: #c8961e;
+  --crimson: #e2433b;
+  --parchment: #ecdcb4;
+  --parchment-2: #dcc796;
+  --parch-ink: #3a2814;
+  --good: #4fd18b;
+
+  --c-red: #d8392f;
+  --c-green: #2e9c5a;
+  --c-blue: #2f6fd6;
+  --c-purple: #7d4cc9;
+  --c-black: #343a44;
+  --c-yellow: #e0ad16;
+
+  --f-display: "Dela Gothic One", "Arial Black", "Helvetica Neue", sans-serif;
+  --f-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --radius: 10px;
+  --wrap: 1180px;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--sea);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 400; line-height: 1.08; margin: 0; text-wrap: balance; letter-spacing: 0.01em; }
+p { margin: 0; }
+
+.wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: 20px; }
+.kicker {
+  font-family: var(--f-mono); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold);
+}
+.section { padding-block: 88px; }
+.section-head { display: grid; gap: 12px; margin-bottom: 40px; max-width: 680px; }
+.section-head h2 { font-size: clamp(30px, 4.4vw, 46px); }
+.section-head p { color: var(--muted); font-size: 17px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 14px 22px; border-radius: 999px; border: 0;
+  font: 600 15px/1 var(--f-body); text-decoration: none; cursor: pointer;
+  transition: transform .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+.btn:hover { transform: translateY(-1px); }
+.btn-gold { background: var(--gold); color: #24180a; box-shadow: 0 6px 0 var(--gold-deep); }
+.btn-gold:active { transform: translateY(3px); box-shadow: 0 3px 0 var(--gold-deep); }
+.btn-ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--line); }
+.btn-ghost:hover { box-shadow: inset 0 0 0 1.5px var(--muted); }
+
+/* Preview ribbon */
+.ribbon {
+  background: var(--crimson); color: #fff; text-align: center;
+  font: 600 13px/1.4 var(--f-body); padding: 8px 16px;
+}
+
+/* Header */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(10, 26, 44, 0.86); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.header-row { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-mark { width: 34px; height: 34px; flex: none; }
+.brand-name { font-family: var(--f-display); font-size: 17px; line-height: 1; letter-spacing: 0.02em; }
+.brand-name span { color: var(--gold); }
+.nav { display: flex; gap: 26px; font-size: 15px; font-weight: 500; }
+.nav a { text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+.header-cta { padding: 10px 18px; font-size: 14px; box-shadow: 0 4px 0 var(--gold-deep); }
+@media (max-width: 900px) { .nav { display: none; } }
+@media (max-width: 420px) { .header-cta { display: none; } }
+
+/* Hero */
+.hero { position: relative; overflow: hidden; padding-block: 72px 96px; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(60% 60% at 78% 40%, rgba(244, 198, 79, 0.16), transparent 70%),
+    repeating-conic-gradient(from 0deg at 78% 42%, rgba(255,255,255,0.045) 0deg 2deg, transparent 2deg 9deg);
+  -webkit-mask-image: radial-gradient(70% 80% at 78% 42%, #000 20%, transparent 75%);
+          mask-image: radial-gradient(70% 80% at 78% 42%, #000 20%, transparent 75%);
+}
+.hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; }
+.hero-copy { display: grid; gap: 24px; min-width: 0; }
+.hero h1 { font-size: clamp(40px, 6.4vw, 76px); }
+.hero h1 em { font-style: normal; color: var(--gold); }
+.hero-sub { font-size: 19px; color: var(--muted); max-width: 33em; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 14px 36px; padding-top: 8px; border-top: 1px solid var(--line); margin-top: 8px; }
+.stat { display: grid; gap: 2px; padding-top: 16px; }
+.stat b { font: 600 24px/1 var(--f-mono); font-variant-numeric: tabular-nums; }
+.stat span { font-size: 13px; color: var(--muted); }
+
+.fan { position: relative; height: 440px; display: grid; place-items: center; }
+.fan .card { position: absolute; width: 230px; }
+.fan .card:nth-child(1) { transform: translateX(-120px) rotate(-12deg) translateY(18px); }
+.fan .card:nth-child(2) { transform: translateX(120px) rotate(11deg) translateY(18px); }
+.fan .card:nth-child(3) { transform: translateY(-8px); z-index: 2; animation: bob 5s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translateY(-20px) rotate(1deg); } }
+
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .fan { height: 360px; }
+  .fan .card { width: 190px; }
+  .fan .card:nth-child(1) { transform: translateX(-90px) rotate(-12deg) translateY(16px); }
+  .fan .card:nth-child(2) { transform: translateX(90px) rotate(11deg) translateY(16px); }
+}
+@media (max-width: 420px) {
+  .fan { height: 300px; }
+  .fan .card { width: 156px; }
+  .fan .card:nth-child(1) { transform: translateX(-70px) rotate(-12deg) translateY(14px); }
+  .fan .card:nth-child(2) { transform: translateX(70px) rotate(11deg) translateY(14px); }
+}
+
+/* Trading card */
+.card {
+  --cc: var(--c-red);
+  aspect-ratio: 63 / 88; max-width: 100%;
+  border-radius: 12px; padding: 9px;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--cc) 88%, #fff 12%), color-mix(in srgb, var(--cc) 70%, #000 30%));
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.25);
+  display: grid; grid-template-rows: auto 1fr auto auto; gap: 6px;
+  color: #fff; position: relative; overflow: hidden; isolation: isolate;
+}
+.card.c-red { --cc: var(--c-red); }
+.card.c-green { --cc: var(--c-green); }
+.card.c-blue { --cc: var(--c-blue); }
+.card.c-purple { --cc: var(--c-purple); }
+.card.c-black { --cc: var(--c-black); }
+.card.c-yellow { --cc: var(--c-yellow); }
+.card-top { display: flex; justify-content: space-between; align-items: center; }
+.cost {
+  width: 2em; height: 2em; border-radius: 50%; display: grid; place-items: center;
+  background: rgba(0,0,0,0.45); font: 600 13px/1 var(--f-mono); box-shadow: inset 0 0 0 1.5px rgba(255,255,255,0.6);
+}
+.rar { font: 600 11px/1 var(--f-mono); letter-spacing: 0.08em; background: rgba(0,0,0,0.5); padding: 5px 7px; border-radius: 4px; }
+.art {
+  border-radius: 6px; position: relative; overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 46%, rgba(255,255,255,0.92) 0 14%, transparent 15%),
+    repeating-conic-gradient(from 3deg at 50% 46%, rgba(0,0,0,0.55) 0deg 1.6deg, transparent 1.6deg 7deg),
+    radial-gradient(circle, rgba(0,0,0,0.22) 1px, transparent 1.4px) 0 0 / 6px 6px,
+    linear-gradient(180deg, #fff7e2, color-mix(in srgb, var(--cc) 30%, #fff7e2 70%));
+  box-shadow: inset 0 0 0 2px rgba(0,0,0,0.35);
+  display: grid; place-items: center;
+}
+.art .glyph {
+  font-family: var(--f-display); font-size: clamp(26px, 30%, 64px); line-height: 1;
+  color: var(--cc); -webkit-text-stroke: 1.5px #1a1209; paint-order: stroke fill;
+  position: relative; top: -4%;
+}
+.card-name {
+  font: 400 clamp(11px, 1.1vw, 14px)/1.15 var(--f-display); text-align: center;
+  background: rgba(255,255,255,0.92); color: #15110b; padding: 6px 4px; border-radius: 4px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.card-meta { display: flex; justify-content: space-between; font: 500 10px/1 var(--f-mono); opacity: 0.9; letter-spacing: 0.04em; }
+.card.holo::after {
+  content: ""; position: absolute; inset: 0; z-index: 3; pointer-events: none; mix-blend-mode: color-dodge;
+  background: linear-gradient(115deg, transparent 20%, rgba(255,120,200,0.5) 36%, rgba(120,220,255,0.55) 46%, rgba(255,240,120,0.5) 56%, transparent 72%);
+  background-size: 250% 250%; animation: foil 4.5s ease-in-out infinite;
+}
+@keyframes foil { 0%,100% { background-position: 100% 50%; } 50% { background-position: 0% 50%; } }
+
+/* Pull ticker */
+.ticker { border-block: 1px solid var(--line); background: var(--sea-2); overflow: hidden; }
+.ticker-row { display: flex; align-items: center; gap: 18px; }
+.ticker-label {
+  flex: none; display: flex; align-items: center; gap: 8px; padding: 14px 0;
+  font: 600 12px/1 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
+}
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--crimson); box-shadow: 0 0 0 0 rgba(226,67,59,.6); animation: pulse 1.6s infinite; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(226,67,59,0); } 100% { box-shadow: 0 0 0 0 rgba(226,67,59,0); } }
+.ticker-viewport { overflow: hidden; flex: 1; min-width: 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); }
+.ticker-track { display: flex; gap: 34px; width: max-content; animation: scroll 60s linear infinite; padding-block: 14px; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+.pull { display: flex; align-items: center; gap: 10px; font-size: 14px; white-space: nowrap; }
+.pull .swatch { width: 12px; height: 16px; border-radius: 2px; background: var(--cc, var(--c-red)); box-shadow: inset 0 0 0 1px rgba(255,255,255,.35); }
+.pull .who { color: var(--muted); }
+.pull .tag { font: 600 11px/1 var(--f-mono); padding: 4px 6px; border-radius: 4px; background: rgba(244,198,79,.14); color: var(--gold); }
+
+/* Wanted posters */
+.posters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; }
+.poster {
+  position: relative; color: var(--parch-ink); padding: 26px 24px 24px;
+  background:
+    radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(110,70,20,0.28)),
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,0.35), transparent 40%),
+    linear-gradient(180deg, var(--parchment), var(--parchment-2));
+  box-shadow: 0 22px 40px rgba(0,0,0,0.4);
+  display: grid; gap: 14px; align-content: start; text-align: center;
+  transform: rotate(var(--tilt, 0deg)); transition: transform .2s ease;
+}
+.poster:nth-child(1) { --tilt: -1.2deg; }
+.poster:nth-child(2) { --tilt: 0.8deg; }
+.poster:nth-child(3) { --tilt: -0.5deg; }
+.poster:hover { transform: rotate(0deg) translateY(-4px); }
+.poster::before {
+  content: ""; position: absolute; top: -9px; left: 50%; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ff8a80, var(--crimson) 55%, #7a1712); box-shadow: 0 3px 4px rgba(0,0,0,.4);
+}
+.poster .rank { position: absolute; top: 14px; left: 16px; font: 600 12px/1 var(--f-mono); letter-spacing: .08em; opacity: .75; }
+.poster .wanted { font-family: var(--f-display); font-size: 44px; line-height: 1; letter-spacing: 0.06em; }
+.poster .frame {
+  aspect-ratio: 4 / 3; border: 3px solid var(--parch-ink); display: grid; place-items: center;
+  background:
+    radial-gradient(circle, rgba(58,40,20,0.25) 1px, transparent 1.3px) 0 0 / 5px 5px,
+    rgba(255,255,255,0.18);
+}
+.poster .logo {
+  width: 92px; height: 92px; border-radius: 50%; display: grid; place-items: center;
+  font: 400 36px/1 var(--f-display); color: var(--parchment); background: var(--parch-ink);
+  box-shadow: 0 0 0 5px rgba(58,40,20,0.25);
+}
+.poster .alive { font: 600 12px/1 var(--f-mono); letter-spacing: 0.3em; }
+.poster h3 { font-size: 26px; }
+.poster .bounty-label { font: 600 11px/1 var(--f-mono); letter-spacing: 0.12em; text-transform: uppercase; opacity: .7; }
+.poster .bounty { font: 600 20px/1.2 var(--f-mono); }
+.poster ul { list-style: none; margin: 0; padding: 12px 0 0; display: grid; gap: 6px; text-align: left; font-size: 14px; border-top: 1.5px dashed rgba(58,40,20,0.4); }
+.poster li { display: flex; gap: 8px; }
+.poster li::before { content: "\2693"; opacity: .6; }
+.poster .meta-row { display: flex; justify-content: space-between; align-items: center; font: 600 12px/1 var(--f-mono); }
+.poster .stars { color: #a6201a; letter-spacing: 2px; }
+.code-chip {
+  display: inline-flex; align-items: center; gap: 8px; justify-self: center; cursor: pointer;
+  border: 1.5px dashed var(--parch-ink); background: transparent; color: var(--parch-ink);
+  padding: 7px 12px; font: 600 13px/1 var(--f-mono); border-radius: 6px;
+}
+.code-chip:hover { background: rgba(58,40,20,.08); }
+.poster .btn { width: 100%; background: var(--parch-ink); color: var(--parchment); box-shadow: 0 5px 0 #1d1309; }
+.poster .btn:hover { background: #4a3419; }
+@media (max-width: 960px) { .posters { grid-template-columns: 1fr; max-width: 440px; margin-inline: auto; } }
+
+.runners { margin-top: 48px; border: 1px solid var(--line); border-radius: var(--radius); overflow-x: auto; }
+.runners table { width: 100%; border-collapse: collapse; min-width: 640px; }
+.runners th, .runners td { padding: 16px 18px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+.runners tr:last-child td { border-bottom: 0; }
+.runners th { font: 600 11px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); background: var(--sea-2); }
+.runners td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.runners .site { display: flex; align-items: center; gap: 12px; font-weight: 600; }
+.runners .mini { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--surface); font: 400 14px/1 var(--f-display); color: var(--gold); flex: none; }
+.runners a.go { color: var(--gold); font-weight: 600; text-decoration: none; white-space: nowrap; }
+.runners a.go:hover { text-decoration: underline; }
+
+/* Demo rip */
+.demo { background: var(--sea-2); border-block: 1px solid var(--line); }
+.demo-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; align-items: center; }
+.demo-copy { display: grid; gap: 20px; }
+.set-picker { display: flex; flex-wrap: wrap; gap: 8px; }
+.set-picker button {
+  font: 600 13px/1 var(--f-mono); padding: 10px 12px; border-radius: 6px; cursor: pointer;
+  background: transparent; color: var(--muted); border: 1.5px solid var(--line);
+}
+.set-picker button[aria-pressed="true"] { color: #24180a; background: var(--gold); border-color: var(--gold); }
+.demo-note { font-size: 13px; color: var(--muted); }
+.stage {
+  min-height: 420px; border-radius: 16px; position: relative; overflow: hidden;
+  background:
+    repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,255,255,0.03) 0deg 3deg, transparent 3deg 10deg),
+    radial-gradient(circle at 50% 50%, var(--surface), var(--sea));
+  border: 1px solid var(--line); display: grid; place-items: center; padding: 28px 16px;
+}
+.pack {
+  width: 200px; aspect-ratio: 5 / 8; border-radius: 10px; position: relative; cursor: pointer; border: 0; padding: 0;
+  background:
+    linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.35) 45%, transparent 60%) 0 0 / 250% 100%,
+    linear-gradient(160deg, var(--pc1, #c9302c), var(--pc2, #5a0f0c));
+  box-shadow: 0 24px 50px rgba(0,0,0,.5), inset 0 0 0 2px rgba(255,255,255,.2);
+  color: #fff; display: grid; place-items: center; text-align: center;
+  animation: sheen 3.2s ease-in-out infinite;
+  transition: transform .2s ease;
+}
+.pack:hover { transform: translateY(-6px) rotate(-1.5deg); }
+@keyframes sheen { 0%,100% { background-position: 100% 0, 0 0; } 50% { background-position: 0% 0, 0 0; } }
+.pack::before, .pack::after {
+  content: ""; position: absolute; left: 0; right: 0; height: 14px;
+  background: repeating-linear-gradient(90deg, rgba(0,0,0,.35) 0 6px, transparent 6px 12px);
+}
+.pack::before { top: 0; border-radius: 10px 10px 0 0; }
+.pack::after { bottom: 0; border-radius: 0 0 10px 10px; }
+.pack-inner { display: grid; gap: 10px; padding: 0 14px; }
+.pack-code { font: 600 13px/1 var(--f-mono); letter-spacing: .14em; opacity: .85; }
+.pack-name { font: 400 22px/1.1 var(--f-display); }
+.pack-cta { font: 600 12px/1 var(--f-mono); letter-spacing: .1em; text-transform: uppercase; background: rgba(0,0,0,.35); padding: 7px 10px; border-radius: 999px; justify-self: center; }
+.pack.ripping { animation: shake .45s ease-in-out; }
+@keyframes shake { 20% { transform: rotate(-4deg); } 40% { transform: rotate(4deg); } 60% { transform: rotate(-3deg) scale(1.03); } 80% { transform: rotate(2deg) scale(1.06); } }
+
+.reveal { display: none; gap: 18px; justify-items: center; text-align: center; width: 100%; }
+.stage.revealed .pack { display: none; }
+.stage.revealed .reveal { display: grid; }
+.reveal-cards { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+.reveal-cards .card { width: 100px; opacity: 0; transform: translateY(24px) rotateY(80deg); animation: flipin .5s ease forwards; }
+.reveal-cards .card.hit { width: 150px; }
+@keyframes flipin { to { opacity: 1; transform: none; } }
+.reveal-title { font: 400 22px/1.2 var(--f-display); }
+.reveal-title .r { color: var(--gold); }
+.reveal-actions { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+@media (max-width: 900px) { .demo-grid { grid-template-columns: 1fr; } }
+@media (max-width: 420px) { .reveal-cards .card { width: 84px; } .reveal-cards .card.hit { width: 128px; } }
+
+/* Sets */
+.sets { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+.set {
+  border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; display: grid; gap: 10px;
+  background: linear-gradient(180deg, var(--sea-2), var(--sea)); text-decoration: none; position: relative; overflow: hidden;
+  transition: border-color .15s ease, transform .15s ease;
+}
+.set:hover { border-color: var(--gold); transform: translateY(-2px); }
+.set .code { font: 600 13px/1 var(--f-mono); color: var(--gold); letter-spacing: .1em; }
+.set h3 { font-size: 20px; }
+.set p { font-size: 14px; color: var(--muted); }
+.set .dots { display: flex; gap: 5px; }
+.set .dots i { width: 10px; height: 10px; border-radius: 50%; display: block; box-shadow: inset 0 0 0 1px rgba(255,255,255,.3); }
+.set .arrow { font-size: 14px; font-weight: 600; color: var(--ink); }
+
+/* Steps */
+.steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px; counter-reset: step; }
+.step { display: grid; gap: 12px; align-content: start; }
+.step .n { font: 400 64px/1 var(--f-display); color: transparent; -webkit-text-stroke: 1.5px var(--gold); }
+.step h3 { font-size: 22px; }
+.step p { color: var(--muted); }
+@media (max-width: 800px) { .steps { grid-template-columns: 1fr; gap: 28px; } }
+
+/* Checklist */
+.check-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 56px; align-items: start; }
+.checks { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.checks div { display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.checks dt { font: 600 13px/1.4 var(--f-mono); color: var(--gold); text-transform: uppercase; letter-spacing: .08em; }
+.checks dd { margin: 0; color: var(--muted); }
+.checks dd b { color: var(--ink); font-weight: 600; }
+@media (max-width: 860px) { .check-grid { grid-template-columns: 1fr; gap: 28px; } .checks div { grid-template-columns: 1fr; gap: 6px; } }
+
+/* FAQ */
+.faq { display: grid; gap: 10px; max-width: 820px; }
+.faq details { border: 1px solid var(--line); border-radius: var(--radius); background: var(--sea-2); }
+.faq summary { cursor: pointer; list-style: none; padding: 18px 22px; font-weight: 600; font-size: 17px; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 600 20px/1 var(--f-mono); color: var(--gold); transition: transform .2s ease; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { padding: 0 22px 20px; color: var(--muted); max-width: 66ch; }
+
+/* Newsletter */
+.signup {
+  border-radius: 18px; padding: 44px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center;
+  background:
+    repeating-conic-gradient(from 0deg at 100% 0%, rgba(255,255,255,0.05) 0deg 2deg, transparent 2deg 8deg),
+    linear-gradient(135deg, #b72d26, #7a1712);
+}
+.signup h2 { font-size: clamp(28px, 3.6vw, 40px); }
+.signup p { color: rgba(255,255,255,.85); margin-top: 10px; }
+.signup form { display: flex; gap: 10px; flex-wrap: wrap; }
+.signup input {
+  flex: 1 1 220px; min-width: 0; padding: 14px 18px; border-radius: 999px; border: 0;
+  font: 500 15px/1 var(--f-body); background: rgba(255,255,255,.95); color: #1a1209;
+}
+.signup .msg { flex-basis: 100%; font-size: 14px; color: #fff; min-height: 1.4em; }
+@media (max-width: 800px) { .signup { grid-template-columns: 1fr; padding: 28px 22px; } }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); padding-block: 56px 40px; margin-top: 88px; color: var(--muted); font-size: 14px; }
+.foot-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; }
+.foot-grid h4 { margin: 0 0 12px; font: 600 12px/1 var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink); }
+.foot-grid ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.foot-grid a { text-decoration: none; }
+.foot-grid a:hover { color: var(--ink); }
+.legal { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); display: grid; gap: 10px; font-size: 13px; }
+.age { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 50%; border: 2px solid var(--crimson); color: var(--ink); font: 600 12px/1 var(--f-mono); flex: none; }
+.legal-row { display: flex; gap: 14px; align-items: center; }
+@media (max-width: 800px) { .foot-grid { grid-template-columns: 1fr 1fr; } }
+
+.toast {
+  position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px);
+  background: var(--ink); color: var(--sea); padding: 10px 18px; border-radius: 999px; font-weight: 600; font-size: 14px;
+  opacity: 0; transition: opacity .2s ease, transform .2s ease; pointer-events: none; z-index: 50;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal-cards .card { opacity: 1; transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<div class="ribbon">Preview build. Partner names, offers, ratings and pulls on this page are sample content.</div>
+
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="One Piece Card Rips home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+        <circle cx="20" cy="20" r="18" fill="none" stroke="#f4c64f" stroke-width="2.5"/>
+        <path d="M20 5 L24 20 L20 35 L16 20 Z" fill="#e2433b"/>
+        <path d="M5 20 L20 16 L35 20 L20 24 Z" fill="#eef3f8" opacity=".85"/>
+        <circle cx="20" cy="20" r="3" fill="#0a1a2c" stroke="#f4c64f" stroke-width="1.5"/>
+      </svg>
+      <span class="brand-name">ONE PIECE<br><span>CARD RIPS</span></span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#sites">Rip sites</a>
+      <a href="#demo">Demo rip</a>
+      <a href="#sets">Sets</a>
+      <a href="#how">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-gold header-cta" href="#sites">Find a rip site</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="kicker">One Piece TCG &middot; Online pack openings</span>
+        <h1>Rip One Piece packs online. <em>Keep the hits.</em></h1>
+        <p class="hero-sub">We compare the sites that open sealed One Piece TCG boosters for you on camera. Pick a set, watch your pack get ripped live, then ship the cards home, vault them or sell them back.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#sites">See top rip sites</a>
+          <a class="btn btn-ghost" href="#demo">Try a free demo rip</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat"><b>12</b><span>rip sites tested</span></div>
+          <div class="stat"><b>OP-01 &ndash; OP-10</b><span>sets covered</span></div>
+          <div class="stat"><b>2,400+</b><span>packs tracked</span></div>
+        </div>
+      </div>
+      <div class="fan" id="hero-fan" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="ticker" aria-label="Recent pulls (sample)">
+    <div class="wrap ticker-row">
+      <div class="ticker-label"><span class="live-dot"></span>Recent pulls</div>
+      <div class="ticker-viewport"><div class="ticker-track" id="ticker"></div></div>
+    </div>
+  </div>
+
+  <section class="section" id="sites">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Most wanted &middot; Updated October 2026</span>
+        <h2>The best sites to rip One Piece packs</h2>
+        <p>Every site here opens real, sealed product on video and lets you take the cards home. We rank them on pack prices, shipping, buyback rates and how fast they pay out.</p>
+      </div>
+
+      <div class="posters">
+        <article class="poster">
+          <span class="rank">#1</span>
+          <div class="wanted">WANTED</div>
+          <div class="frame"><div class="logo">LP</div></div>
+          <div class="alive">RIPPED LIVE</div>
+          <h3>Log Pose Breaks</h3>
+          <div>
+            <div class="bounty-label">Welcome bounty</div>
+            <div class="bounty">Free OP-09 pack</div>
+          </div>
+          <button class="code-chip" type="button" data-code="GRANDLINE">Code: GRANDLINE &#x2398;</button>
+          <div class="meta-row"><span class="stars" aria-label="4.9 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span>4.9 / 5</span></div>
+          <ul>
+            <li>Japanese and English packs</li>
+            <li>85% card buyback</li>
+            <li>Free shipping over $75</li>
+          </ul>
+          <a class="btn" href="#" rel="sponsored nofollow noopener">Rip at Log Pose</a>
+        </article>
+
+        <article class="poster">
+          <span class="rank">#2</span>
+          <div class="wanted">WANTED</div>
+          <div class="frame"><div class="logo">TS</div></div>
+          <div class="alive">RIPPED LIVE</div>
+          <h3>Thousand Sunny Packs</h3>
+          <div>
+            <div class="bounty-label">Welcome bounty</div>
+            <div class="bounty">10% back on first box</div>
+          </div>
+          <button class="code-chip" type="button" data-code="SUNNY10">Code: SUNNY10 &#x2398;</button>
+          <div class="meta-row"><span class="stars" aria-label="4.7 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span>4.7 / 5</span></div>
+          <ul>
+            <li>Full booster box breaks</li>
+            <li>Vault cards for free</li>
+            <li>Same-week shipping</li>
+          </ul>
+          <a class="btn" href="#" rel="sponsored nofollow noopener">Rip at Thousand Sunny</a>
+        </article>
+
+        <article class="poster">
+          <span class="rank">#3</span>
+          <div class="wanted">WANTED</div>
+          <div class="frame"><div class="logo">DD</div></div>
+          <div class="alive">RIPPED LIVE</div>
+          <h3>Den Den Pulls</h3>
+          <div>
+            <div class="bounty-label">Welcome bounty</div>
+            <div class="bounty">$5 rip credit</div>
+          </div>
+          <button class="code-chip" type="button" data-code="DENDEN5">Code: DENDEN5 &#x2398;</button>
+          <div class="meta-row"><span class="stars" aria-label="4.6 out of 5">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span>4.6 / 5</span></div>
+          <ul>
+            <li>Single packs from $5.49</li>
+            <li>Graded slab upgrades</li>
+            <li>Daily live streams</li>
+          </ul>
+          <a class="btn" href="#" rel="sponsored nofollow noopener">Rip at Den Den</a>
+        </article>
+      </div>
+
+      <div class="runners">
+        <table>
+          <thead>
+            <tr><th>Rank</th><th>Site</th><th>Pack from</th><th>Buyback</th><th>Welcome offer</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="num">#4</td><td><div class="site"><span class="mini">RL</span>Red Line Rips</div></td><td class="num">$5.99</td><td class="num">80%</td><td>Free shipping on first order</td><td><a class="go" href="#" rel="sponsored nofollow noopener">Visit &rarr;</a></td></tr>
+            <tr><td class="num">#5</td><td><div class="site"><span class="mini">BB</span>Berry Box</div></td><td class="num">$6.25</td><td class="num">82%</td><td>Second pack half price</td><td><a class="go" href="#" rel="sponsored nofollow noopener">Visit &rarr;</a></td></tr>
+            <tr><td class="num">#6</td><td><div class="site"><span class="mini">NW</span>New World Breaks</div></td><td class="num">$5.75</td><td class="num">78%</td><td>$3 credit with code NEWWORLD</td><td><a class="go" href="#" rel="sponsored nofollow noopener">Visit &rarr;</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section demo" id="demo">
+    <div class="wrap demo-grid">
+      <div class="demo-copy">
+        <span class="kicker">Free demo &middot; No sign-up</span>
+        <h2 style="font-size: clamp(30px, 4.4vw, 46px);">Rip a pack right here</h2>
+        <p style="color: var(--muted); font-size: 17px;">Get a feel for an online rip before you spend anything. Pick a set and tap the pack to open it.</p>
+        <div class="set-picker" id="set-picker" role="group" aria-label="Choose a set"></div>
+        <p class="demo-note">Demo only. Pulls are random and do not reflect real pull rates on any partner site.</p>
+      </div>
+      <div class="stage" id="stage">
+        <button class="pack" id="pack" type="button" aria-label="Rip this pack">
+          <span class="pack-inner">
+            <span class="pack-code" id="pack-code">OP-09</span>
+            <span class="pack-name" id="pack-name">Emperors in the New World</span>
+            <span class="pack-cta">Tap to rip</span>
+          </span>
+        </button>
+        <div class="reveal" id="reveal" aria-live="polite">
+          <div class="reveal-title" id="reveal-title"></div>
+          <div class="reveal-cards" id="reveal-cards"></div>
+          <div class="reveal-actions">
+            <button class="btn btn-gold" id="again" type="button">Rip another</button>
+            <a class="btn btn-ghost" href="#sites">Rip for real</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sets">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">Set guides</span>
+        <h2>Pick your set</h2>
+        <p>Every main booster set, with the colors it pushes and where to rip it for the best price right now.</p>
+      </div>
+      <div class="sets" id="sets-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="how" style="padding-top: 24px;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">How online rips work</span>
+        <h2>From sealed pack to your binder</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="n">1</span>
+          <h3>Buy a pack</h3>
+          <p>Choose a set on one of our rated sites and pay for a single pack or a full booster box. Use our codes for a welcome bonus.</p>
+        </div>
+        <div class="step">
+          <span class="n">2</span>
+          <h3>Watch it get ripped</h3>
+          <p>The site opens your sealed pack on camera, either live on stream or as a recorded video tied to your order.</p>
+        </div>
+        <div class="step">
+          <span class="n">3</span>
+          <h3>Ship, vault or sell</h3>
+          <p>Have the cards shipped to your door, store them in the site's vault, or sell them back instantly for site credit.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 24px;">
+    <div class="wrap check-grid">
+      <div class="section-head" style="margin-bottom: 0;">
+        <span class="kicker">How we rate rip sites</span>
+        <h2>Five things every site has to pass</h2>
+        <p>We buy packs with our own money and go through the full process: checkout, the opening, shipping and buyback. Sites that fail any check do not make the list.</p>
+      </div>
+      <dl class="checks">
+        <div><dt>Sealed product</dt><dd><b>Factory-sealed packs only.</b> We check that openings show the wrapper intact and the pack code on camera.</dd></div>
+        <div><dt>Proof of rip</dt><dd><b>Every pack on video.</b> Each order must link to footage of that exact opening.</dd></div>
+        <div><dt>Shipping</dt><dd><b>Cards arrive sleeved and protected.</b> We time delivery and check card condition on arrival.</dd></div>
+        <div><dt>Buyback</dt><dd><b>Clear, fair sell-back prices.</b> We compare buyback offers to recent market sales.</dd></div>
+        <div><dt>Payouts</dt><dd><b>Credit and withdrawals that work.</b> We test how fast balances can be cashed out.</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section" id="faq" style="padding-top: 24px;">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="kicker">FAQ</span>
+        <h2>Questions about ripping online</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>What is an online card rip?</summary>
+          <p>You buy a sealed booster pack from a website, and the site opens it for you on camera. You keep whatever is inside, the same as opening it yourself, without waiting for the pack to ship first.</p>
+        </details>
+        <details>
+          <summary>Do I actually get the cards?</summary>
+          <p>Yes. Every site we list lets you ship the physical cards to your address. Most also let you keep them in a free vault until you are ready, or sell them back for credit.</p>
+        </details>
+        <details>
+          <summary>Are Japanese packs better to rip than English ones?</summary>
+          <p>Japanese packs are usually cheaper per pack and release sets earlier. English packs hold more value for many collectors in the West. Several sites on our list stock both, so you can choose per set.</p>
+        </details>
+        <details>
+          <summary>How do you make money?</summary>
+          <p>We earn a commission when you sign up or buy through our links. This never changes the price you pay. Sites cannot pay to change their ranking.</p>
+        </details>
+        <details>
+          <summary>Is there an age limit?</summary>
+          <p>Yes. Most rip sites require you to be 18 or older, especially those with buyback or credit features. Check the rules in your country before signing up.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="signup">
+      <div>
+        <h2>Get new set drops and rip deals first</h2>
+        <p>One email when a new set lands or a partner runs a bonus. No spam.</p>
+      </div>
+      <form id="signup-form" novalidate>
+        <label for="email" class="kicker" style="color: #fff; flex-basis: 100%;">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn btn-gold" type="submit">Join the crew</button>
+        <div class="msg" id="signup-msg" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom: 14px;">
+          <span class="brand-name" style="color: var(--ink);">ONE PIECE<br><span>CARD RIPS</span></span>
+        </a>
+        <p>Independent reviews of online One Piece TCG rip sites. Updated every month.</p>
+      </div>
+      <div>
+        <h4>Rip sites</h4>
+        <ul><li><a href="#sites">Top rated</a></li><li><a href="#sites">Welcome offers</a></li><li><a href="#sites">Best buyback</a></li></ul>
+      </div>
+      <div>
+        <h4>Guides</h4>
+        <ul><li><a href="#sets">Set guides</a></li><li><a href="#how">How rips work</a></li><li><a href="#demo">Demo rip</a></li></ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul><li><a href="#faq">FAQ</a></li><li><a href="#">Affiliate disclosure</a></li><li><a href="#">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div class="legal-row"><span class="age">18+</span><p>Some rip sites offer buyback and credit features. Only spend what you can afford, and check the laws where you live.</p></div>
+      <p>Affiliate disclosure: we may earn a commission from links on this site at no extra cost to you.</p>
+      <p>onepiececardrips.com is a fan-run comparison site and is not affiliated with or endorsed by Bandai, Eiichiro Oda, Shueisha or Toei Animation. ONE PIECE and related names are trademarks of their respective owners.</p>
+      <p>&copy; <span id="year">2026</span> onepiececardrips.com</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function () {
+  var COLORS = ["red", "green", "blue", "purple", "black", "yellow"];
+
+  var SETS = [
+    { code: "OP-01", name: "Romance Dawn", colors: ["red", "green", "blue", "purple"], pack: ["#c9302c", "#5a0f0c"] },
+    { code: "OP-02", name: "Paramount War", colors: ["red", "green", "blue", "purple"], pack: ["#d0662a", "#5b230a"] },
+    { code: "OP-03", name: "Pillars of Strength", colors: ["red", "green", "blue", "purple", "black"], pack: ["#2f6fd6", "#0e2558"] },
+    { code: "OP-04", name: "Kingdoms of Intrigue", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#7d4cc9", "#2a1352"] },
+    { code: "OP-05", name: "Awakening of the New Era", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#e0ad16", "#6b4a00"] },
+    { code: "OP-06", name: "Wings of the Captain", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#2e9c5a", "#0c3d22"] },
+    { code: "OP-07", name: "500 Years in the Future", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#3aa1c9", "#0b3346"] },
+    { code: "OP-08", name: "Two Legends", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#8c2d2d", "#2a0b0b"] },
+    { code: "OP-09", name: "Emperors in the New World", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#c9302c", "#3d0c2e"] },
+    { code: "OP-10", name: "Royal Blood", colors: ["red", "green", "blue", "purple", "black", "yellow"], pack: ["#6a2a8c", "#1a0a2a"] }
+  ];
+
+  var CHARACTERS = [
+    "Monkey.D.Luffy", "Roronoa Zoro", "Nami", "Usopp", "Sanji", "Tony Tony.Chopper",
+    "Nico Robin", "Franky", "Brook", "Jinbe", "Shanks", "Trafalgar Law",
+    "Boa Hancock", "Portgas.D.Ace", "Sabo", "Yamato", "Kaido", "Charlotte Linlin",
+    "Eustass Kid", "Uta", "Edward Newgate", "Marshall.D.Teach", "Kozuki Oden", "Dracule Mihawk"
+  ];
+
+  var RARITIES = [
+    { r: "C", w: 52, holo: false },
+    { r: "UC", w: 26, holo: false },
+    { r: "R", w: 13, holo: false },
+    { r: "SR", w: 6, holo: true },
+    { r: "L", w: 1.6, holo: true },
+    { r: "SEC", w: 0.9, holo: true },
+    { r: "ALT", w: 0.4, holo: true },
+    { r: "MANGA", w: 0.1, holo: true }
+  ];
+
+  function pick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+  function weighted(list) {
+    var total = list.reduce(function (s, x) { return s + x.w; }, 0);
+    var n = Math.random() * total;
+    for (var i = 0; i < list.length; i++) { n -= list[i].w; if (n <= 0) return list[i]; }
+    return list[0];
+  }
+  function initials(name) {
+    var parts = name.replace(/\./g, " ").split(/\s+/).filter(Boolean);
+    return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : "")).toUpperCase();
+  }
+  function cardNo(set) { return set.code.replace("-", "") + "-" + String(1 + Math.floor(Math.random() * 120)).padStart(3, "0"); }
+
+  function makeCard(opts) {
+    var el = document.createElement("div");
+    el.className = "card c-" + opts.color + (opts.holo ? " holo" : "") + (opts.extra ? " " + opts.extra : "");
+    el.innerHTML =
+      '<div class="card-top"><span class="cost">' + opts.cost + '</span><span class="rar">' + opts.rarity + '</span></div>' +
+      '<div class="art"><span class="glyph">' + initials(opts.name) + '</span></div>' +
+      '<div class="card-name"></div>' +
+      '<div class="card-meta"><span>' + opts.no + '</span><span>' + opts.power + '</span></div>';
+    el.querySelector(".card-name").textContent = opts.name;
+    return el;
+  }
+
+  // Hero fan
+  var fan = document.getElementById("hero-fan");
+  [
+    { color: "green", rarity: "SR", name: "Roronoa Zoro", cost: 5, no: "OP06-118", power: "7000", holo: true },
+    { color: "purple", rarity: "SEC", name: "Kaido", cost: 10, no: "OP04-044", power: "12000", holo: true },
+    { color: "red", rarity: "MANGA", name: "Monkey.D.Luffy", cost: 10, no: "OP09-119", power: "12000", holo: true }
+  ].forEach(function (c) { fan.appendChild(makeCard(c)); });
+
+  // Ticker (sample data)
+  var HANDLES = ["strawhat_sam", "gomugomu", "berrybanker", "redhair_rips", "sunnyside", "zoro_lost_again", "navigator_nk", "laws_room", "drumrock", "goingmerry"];
+  var SITES = ["Log Pose Breaks", "Thousand Sunny Packs", "Den Den Pulls", "Red Line Rips", "Berry Box"];
+  var ticker = document.getElementById("ticker");
+  var items = [];
+  for (var i = 0; i < 12; i++) {
+    var set = pick(SETS);
+    var hit = weighted(RARITIES.slice(3));
+    items.push({ who: pick(HANDLES), name: pick(CHARACTERS), r: hit.r, set: set.code, color: pick(set.colors), site: pick(SITES) });
+  }
+  var html = "";
+  items.concat(items).forEach(function (p) {
+    html += '<span class="pull" style="--cc: var(--c-' + p.color + ')"><span class="swatch"></span>' +
+      '<span class="who">@' + p.who + '</span><span>' + p.name + '</span>' +
+      '<span class="tag">' + p.r + ' &middot; ' + p.set + '</span><span class="who">on ' + p.site + '</span></span>';
+  });
+  ticker.innerHTML = html;
+
+  // Sets grid
+  var grid = document.getElementById("sets-grid");
+  SETS.slice().reverse().forEach(function (s) {
+    var a = document.createElement("a");
+    a.className = "set";
+    a.href = "#sites";
+    a.innerHTML =
+      '<span class="code">' + s.code + '</span>' +
+      '<h3></h3>' +
+      '<div class="dots">' + s.colors.map(function (c) { return '<i style="background: var(--c-' + c + ')"></i>'; }).join("") + '</div>' +
+      '<span class="arrow">Where to rip &rarr;</span>';
+    a.querySelector("h3").textContent = s.name;
+    grid.appendChild(a);
+  });
+
+  // Demo rip
+  var current = SETS[8];
+  var picker = document.getElementById("set-picker");
+  var pack = document.getElementById("pack");
+  var stage = document.getElementById("stage");
+  var revealCards = document.getElementById("reveal-cards");
+  var revealTitle = document.getElementById("reveal-title");
+
+  function setPack(s) {
+    current = s;
+    document.getElementById("pack-code").textContent = s.code;
+    document.getElementById("pack-name").textContent = s.name;
+    pack.style.setProperty("--pc1", s.pack[0]);
+    pack.style.setProperty("--pc2", s.pack[1]);
+    Array.prototype.forEach.call(picker.children, function (b) { b.setAttribute("aria-pressed", b.dataset.code === s.code ? "true" : "false"); });
+    stage.classList.remove("revealed");
+  }
+
+  SETS.slice(4).reverse().forEach(function (s) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.textContent = s.code;
+    b.dataset.code = s.code;
+    b.title = s.name;
+    b.addEventListener("click", function () { setPack(s); });
+    picker.appendChild(b);
+  });
+  setPack(current);
+
+  function rip() {
+    pack.classList.add("ripping");
+    setTimeout(function () {
+      pack.classList.remove("ripping");
+      revealCards.innerHTML = "";
+      var commons = [RARITIES[0], RARITIES[0], RARITIES[1]];
+      var hit = weighted(RARITIES.slice(2));
+      commons.concat([hit]).forEach(function (rar, idx) {
+        var isHit = idx === 3;
+        var card = makeCard({
+          color: pick(current.colors),
+          rarity: rar.r,
+          name: pick(CHARACTERS),
+          cost: 1 + Math.floor(Math.random() * 9),
+          no: cardNo(current),
+          power: (Math.floor(Math.random() * 9) + 1) * 1000,
+          holo: rar.holo,
+          extra: isHit ? "hit" : ""
+        });
+        card.style.animationDelay = (idx * 0.18) + "s";
+        revealCards.appendChild(card);
+      });
+      var big = ["SEC", "ALT", "MANGA", "L"].indexOf(hit.r) !== -1;
+      revealTitle.innerHTML = (big ? "Huge pull! " : "Your best pull: ") + '<span class="r">' + hit.r + "</span>";
+      stage.classList.add("revealed");
+    }, 450);
+  }
+  pack.addEventListener("click", rip);
+  document.getElementById("again").addEventListener("click", function () { stage.classList.remove("revealed"); pack.focus(); });
+
+  // Promo code copy
+  var toast = document.getElementById("toast");
+  var toastTimer;
+  function showToast(msg) {
+    toast.textContent = msg;
+    toast.classList.add("show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { toast.classList.remove("show"); }, 1800);
+  }
+  document.querySelectorAll(".code-chip").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var code = btn.dataset.code;
+      var done = function () { showToast("Copied code " + code); };
+      try {
+        navigator.clipboard.writeText(code).then(done, function () { showToast("Code: " + code); });
+      } catch (e) { showToast("Code: " + code); }
+    });
+  });
+
+  // Newsletter (preview only)
+  document.getElementById("signup-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var input = document.getElementById("email");
+    var msg = document.getElementById("signup-msg");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim())) {
+      msg.textContent = "Enter a full email address, like you@example.com.";
+      input.focus();
+      return;
+    }
+    msg.textContent = "Thanks! Sign-up goes live with the full site launch.";
+    input.value = "";
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
